@@ -90,7 +90,9 @@ const ContractComponent = () => {
 
   return (
     <div className="max-w-4xl mx-auto p-6 space-y-6 min-h-screen" dir="rtl">
-      <h3 className="text-2xl font-bold text-center">منصة العقود الرقمية</h3>
+      <h3 className="text-2xl font-bold text-center mt-10 md:mt-20">
+        منصة العقود الرقمية
+      </h3>
       {/* Contract Lookup Form */}
       <Card>
         <CardHeader>
