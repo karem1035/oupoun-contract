@@ -12,7 +12,7 @@ import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
 import { Alert, AlertDescription } from '@/components/ui/alert';
-import { Loader2, FileText, CheckCircle, XCircle } from 'lucide-react';
+import { Loader2, FileText, CheckCircle, XCircle, MapPin } from 'lucide-react';
 
 const ContractComponent = () => {
   const [contractData, setContractData] = useState(null);
@@ -197,26 +197,53 @@ const ContractComponent = () => {
                 </div>
 
                 {contractData.business_details && (
-                  <div className="mt-4 p-4 bg-gray-50 rounded-lg text-right">
-                    <h4 className="font-semibold mb-2">تفاصيل العمل</h4>
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
-                      <div>
-                        <Label className="text-sm text-gray-600">
-                          اسم العمل (EN)
-                        </Label>
-                        <p>{contractData.business_details.business_name?.en}</p>
+                  <div className=" grid grid-cols-2 gap-4">
+                    {/* Opal */}
+                    <div className="mt-4 p-4 bg-gray-50 rounded-lg text-right">
+                      <h4 className="font-semibold mb-2">
+                        الطرف الأول (الشركة)
+                      </h4>
+                      <div className="flex flex-col gap-2">
+                        <p className="font-semibold">
+                          شركة أوبال العالم للتجارة شركة شخص واحد
+                        </p>
+                        {/* السحل التجاري */}
+                        <p className="text-sm">
+                          <span className="text-gray-500">السجل التجاري:</span>{' '}
+                          1010311191
+                        </p>
+                        <p className="text-sm text-gray-500 flex items-center gap-1">
+                          <MapPin className="w-3 h-3" /> الرياض - 6999 صلاح
+                          الدين الايوبي - الملز 2300 المملكة العربية السعودية
+                        </p>
                       </div>
-                      <div>
-                        <Label className="text-sm text-gray-600">
-                          اسم العمل (AR)
-                        </Label>
-                        <p>{contractData.business_details.business_name?.ar}</p>
-                      </div>
-                      <div>
-                        <Label className="text-sm text-gray-600">
-                          رقم السجل التجاري
-                        </Label>
-                        <p>{contractData.business_details.cr_number}</p>
+                    </div>
+                    {/* The other */}
+                    <div className="mt-4 p-4 bg-gray-50 rounded-lg text-right">
+                      <h4 className="font-semibold mb-2">تفاصيل العمل</h4>
+                      <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
+                        <div>
+                          <Label className="text-sm text-gray-600">
+                            اسم العمل (EN)
+                          </Label>
+                          <p>
+                            {contractData.business_details.business_name?.en}
+                          </p>
+                        </div>
+                        <div>
+                          <Label className="text-sm text-gray-600">
+                            اسم العمل (AR)
+                          </Label>
+                          <p>
+                            {contractData.business_details.business_name?.ar}
+                          </p>
+                        </div>
+                        <div>
+                          <Label className="text-sm text-gray-600">
+                            رقم السجل التجاري
+                          </Label>
+                          <p>{contractData.business_details.cr_number}</p>
+                        </div>
                       </div>
                     </div>
                   </div>
