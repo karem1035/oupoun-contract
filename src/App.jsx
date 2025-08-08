@@ -220,7 +220,9 @@ const ContractComponent = () => {
                     </div>
                     {/* The other */}
                     <div className="mt-4 p-4 bg-gray-50 rounded-lg text-right">
-                      <h4 className="font-semibold mb-2">تفاصيل العمل</h4>
+                      <h4 className="font-semibold mb-2">
+                        الطرف الثاني (الشركاء)
+                      </h4>
                       <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
                         <div>
                           <Label className="text-sm text-gray-600">
