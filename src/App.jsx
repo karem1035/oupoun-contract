@@ -147,7 +147,17 @@ const ContractComponent = () => {
         {contractData && (
           <div className="space-y-6">
             {/* Basic Contract Info */}
-            <Card>
+            <Card className="pt-0 overflow-hidden">
+              {/* This is the updated CardHeader with the new information */}
+              <CardHeader className="bg-gradient-to-r from-gray-900 to-gray-700 p-6 flex flex-col justify-center items-center gap-2 text-white">
+                <h3 className="text-xl font-bold">اتفاقية تعاون</h3>
+                <div className="flex flex-col justify-between items-center text-sm font-medium">
+                  {/* Display the contract reference ID */}
+                  <p>مرجع العقد: {contractData.ref}#</p>
+                  {/* Display the formatted date */}
+                  <p>{formatDate(contractData.start_date)}</p>
+                </div>
+              </CardHeader>
               <CardHeader>
                 <CardTitle className="flex items-center justify-between text-right">
                   تفاصيل العقد
